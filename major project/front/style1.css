@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table.c {
+   width: 100%;  
+}
+
+.f1{
+  
+  text-align: center;
+  left:25%;
+  width: 57%;
+  border: 3px solid black;
+ margin-left: 5%;
+ margin-top: 5%;
+ }
+ .f1 input{
+   width: 30%;
+   height: 30%;
+    margin-top: 5%;
+   }
+.topnav {
+  overflow: hidden;
+  margin-top: -15px;
+  background-color: #333;
+  
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  
+}
+
+.topnav a.active {
+  background-color: #608bdb;
+  color: white;
+}
