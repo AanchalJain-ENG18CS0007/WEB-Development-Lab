@@ -1,0 +1,40 @@
+<video id="video" width="60%" height="60%" autoplay>
+</video>
+                     
+                   <div class="text-right">
+                       <a href="#!" class="btn btn-danger" 
+                           onClick="stop()">
+                           Stop Cam
+                       </a>
+                       <a href="#!" class="btn btn-success"
+                           onClick="start()">
+                           Start Cam
+                       </a>
+                   </div>
+                   <script>
+                    var stop = function () {
+                        var stream = video.srcObject;
+                        var tracks = stream.getTracks();
+                        for (var i = 0; i < tracks.length; i++) {
+                            var track = tracks[i];
+                            track.stop();
+                        }
+                        video.srcObject = null;
+                    }
+                    var start = function () {
+                        var video = document.getElementById('video'),
+                            vendorUrl = window.URL || window.webkitURL;
+                        if (navigator.mediaDevices.getUserMedia) {
+                            navigator.mediaDevices.getUserMedia({ video: true })
+                                .then(function (stream) {
+                                    video.srcObject = stream;
+                                }).catch(function (error) {
+                                    console.log("Something went wrong!");
+                                });
+                        }
+                    }
+                    $(function () {
+                        start();
+                    });  
+                </script>
+                 </td></tr>   
